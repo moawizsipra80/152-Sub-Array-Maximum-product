@@ -1,0 +1,24 @@
+class Solution {
+public:
+
+    int pro=INT_MIN;
+    int maxProduct(vector<int>& nums) 
+    {
+     int maxp=nums[0];
+
+     for(int k=0;k<nums.size();k++)
+     {
+        int prod=1;
+    for(int l=k;l<nums.size();l++)
+    {
+     prod*=nums[l];
+    //  maxp=max(maxp,prod);
+     if(prod>maxp){
+
+        maxp=prod;
+     }
+    }
+     }
+    return maxp;    
+    }
+};
